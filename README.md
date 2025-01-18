@@ -68,3 +68,13 @@ In this Milestone, we created the sign up page
 3. We also implemented adding the profile picture function to add the user's profile image.
 4. To implement this, I used useState to manage the state of the preview Picture
 5. In the handlePic function, we created a URL for the image the user added.
+
+
+### Milestone 6: Connect
+
+In this Milestone
+1. We learned how to encrypt data using bcrypt before saving.
+2. We also learned how to store user's data to the database without the problem of them getting lost.
+3. We also learned how to connect backend to frontend.
+4. All the frontend part we have done was later connected to the backend, so that the profile image the user sends will be stored in the uploads folder.
+5. We also managed data using json web tokens.
