@@ -45,7 +45,15 @@ To do this,
 4. In Models, the user schema is declared in a way that the data can be scored in that way.
 5. In utils, errorHandler.js is coded.
 
-
+### Milestone 4: Creating User Model and Controller
+In this Milestone,
+1. We created Controllers folder, here we created user.js
+2. Also created Models folder, here also we created user.js
+3. Then we created a multer.js file.
+4. We also installed bcryptjs and multer
+5. In the models/user.js we created a user Schema.
+6. In the controllers/user.js we defined a route in an Express application that is responsible for handling the creation of a new user. 
+7. In multer.js, we wrote some basic multer.js code to store and create the filename for the file upload.
 
 ### Milestone 5: Frontend - Signup page
 
