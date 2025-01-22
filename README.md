@@ -91,3 +91,15 @@ In this Milestone,
 6. Process the user's input password using the same hashing algorithm (e.g., bcrypt).
 7. Compare the resulting hash to the stored hashed password.
 8. If they match, the user is authenticated; if not, send an error.
+
+
+### Milestone 8: Home Page creation
+
+In this Milestone,
+1. Create a card component.
+2. Display those cards on the products page.
+3. A single card component that accepts product details as props.
+4. Array mapping to iterate over the product list and render a card for each product.
+5. Reusable card component with props for product details (e.g., name, image, price).
+6. A grid layout or flexbox for displaying multiple cards neatly.
+7. A home page with a route connecting to app.jsx.
