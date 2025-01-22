@@ -2,17 +2,33 @@ import React,{useState} from 'react'
 import '../App.css'
 import {useForm} from 'react-hook-form'
 import { Link } from 'react-router-dom';
+import axios from 'axios'
 
 function login() {
-  const {register,handleSubmit,watch,formState:{errors},reset} = useForm();
-  
+  const {register,handleSubmit,formState:{errors},reset} = useForm();
+  const [error, setError] = useState(""); 
   const [submit,setSubmit] = useState(false);
  
   
-  const doneSubmit = (data)=>{
+  const doneSubmit = async(data)=>{
     console.log(data)
     setSubmit(true);
     reset()
+    
+    try {
+      // Make the POST request to the backend (replace with your actual API endpoint)
+      const response = await axios.post("http://localhost:8000/api/v2/user/login", data);
+      
+      // Assuming response contains a token or user data on successful login
+      console.log(response.data);
+      localStorage.setItem("authToken", response.data.token);
+      // Redirect or take some action upon successful login here
+    } catch (error) {
+      // Handle errors (e.g., invalid credentials)
+      setError("There was an error logging in. Please check your credentials.");
+      console.error("There was an error logging in!", error);
+    
+  };
   }
 
 
@@ -25,7 +41,7 @@ function login() {
         <input placeholder="Email" className='p-3 border-2 rounded-md' {...register("email",{required:"Email is required"})}/>
         {errors.email && <span className='flex justify-start pl-3 text-red-500'>{errors.email.message}</span>}
 
-        <input placeholder="Password" className='p-3 border-2 rounded-md' {...register("password",{required:"Password is required"})}/>
+        <input placeholder="Password" type="password" className='p-3 border-2 rounded-md' {...register("password",{required:"Password is required"})}/>
         {errors.password && <span className='flex justify-start pl-3 text-red-500'>{errors.password.message}</span>}
         
         <div className='flex gap-2 pl-1'>

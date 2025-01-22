@@ -10,7 +10,7 @@ function Signup() {
   const [avatar, setAvatar] = useState(null);
   const [previewPic, setPreviewPic] = useState(null);
 
-  const doneSubmit = async (data) => {
+  const doneSubmit = async(data) => {
     console.log(data);
     setSubmit(true);
     setPreviewPic(null)
@@ -19,8 +19,8 @@ function Signup() {
     // Prepare FormData with form data and image file
     const newForm = new FormData();
     newForm.append("file", avatar);  // Image file
-    newForm.append("firstName", data.firstName);
-    newForm.append("lastName", data.LastName);
+    newForm.append("firstname", data.firstname);
+    newForm.append("lastname", data.lastname);
     newForm.append("email", data.email);
     newForm.append("password", data.password);
 
@@ -28,16 +28,18 @@ function Signup() {
     const config = {
       headers: {
         "Content-Type": "multipart/form-data",
-        "Accept": "application/json",
+        "Accept": "any",
       },
     };
 
-    try {
-      const response = await axios.post("http://localhost:8000/api/v2/user/create-user", newForm, config);
-      console.log(response.data);
-    } catch (err) {
-      console.error("Error:", err);
-    }
+    axios
+    .post("http://localhost:8000/api/v2/user/create-user", newForm, config)
+    .then((res) => {
+      console.log(res.data); // Success response from server
+    })
+    .catch((err) => {
+      console.error(err.response ? err.response.data : err.message); // Error handling
+    });
   };
 
   const password = watch("password");
@@ -60,16 +62,16 @@ function Signup() {
           <input
             placeholder='First Name'
             className='p-3 border-2 rounded-md'
-            {...register('firstName', { required: "First Name is required" })}
+            {...register('firstname', { required: "First Name is required" })}
           />
-          {errors.firstName && <span className='flex justify-start rounded-md pl-2 text-red-500'>{errors.firstName.message}</span>}
+          {errors.firstname && <span className='flex justify-start rounded-md pl-2 text-red-500'>{errors.firstname.message}</span>}
 
           <input
             placeholder='Last Name'
             className='p-3 border-2 rounded-md'
-            {...register('LastName', { required: "Last Name is required" })}
+            {...register('lastname', { required: "Last Name is required" })}
           />
-          {errors.LastName && <span className='flex justify-start pl-2 rounded-md text-red-500'>{errors.LastName.message}</span>}
+          {errors.lastname && <span className='flex justify-start pl-2 rounded-md text-red-500'>{errors.lastname.message}</span>}
 
           <input
             placeholder="Email"

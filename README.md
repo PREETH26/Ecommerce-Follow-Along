@@ -78,3 +78,16 @@ In this Milestone
 3. We also learned how to connect backend to frontend.
 4. All the frontend part we have done was later connected to the backend, so that the profile image the user sends will be stored in the uploads folder.
 5. We also managed data using json web tokens.
+
+
+### Milestone 7: MongoDB connection 
+
+In this Milestone,
+1. Understand how to validate user credentials during login.
+2. Learn how to compare the encrypted password with the user’s input.
+3. The user provides their email/username and password on the login page.
+4. The backend retrieves the user record based on the provided email/username.
+5. If the user is not found, return an error: "User does not exist."
+6. Process the user's input password using the same hashing algorithm (e.g., bcrypt).
+7. Compare the resulting hash to the stored hashed password.
+8. If they match, the user is authenticated; if not, send an error.
