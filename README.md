@@ -103,3 +103,13 @@ In this Milestone,
 5. Reusable card component with props for product details (e.g., name, image, price).
 6. A grid layout or flexbox for displaying multiple cards neatly.
 7. A home page with a route connecting to app.jsx.
+
+
+### Milestone 9: Product Creation Page
+
+In this Milestone,
+1. Learned how to create a form that will take all the details of product
+2. Learned how to take multiple images as input.
+3. Creating the page using Tailwind CSS and React JS.
+4. Form creation using useState.
+5. And styling it accordingly using Tailwind CSS
