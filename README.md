@@ -113,3 +113,14 @@ In this Milestone,
 3. Creating the page using Tailwind CSS and React JS.
 4. Form creation using useState.
 5. And styling it accordingly using Tailwind CSS
+
+
+### Milestone 10: Connecting to Mongo DB
+
+In this Milestone,
+1. Learned how to write product schema using mongoose
+2. Learned how to create an end point to validate and store product details in mongodb.
+3. Get about 10 images from the user and post it to backend.
+4. Use Multer to store the images in the Product folder.
+5. Build a POST endpoint to receive product data.
+6. Validate and save the product details to MongoDB.
