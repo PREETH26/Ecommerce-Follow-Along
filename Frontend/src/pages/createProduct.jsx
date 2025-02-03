@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { AiOutlinePlusCircle } from "react-icons/ai";
 import axios from "axios";
 
@@ -8,7 +8,7 @@ const CreateProduct = () => {
     const [name, setName] = useState("");
     const [description, setDescription] = useState("");
     const [category, setCategory] = useState("");
-    const [tags, setTags] = useState("");  // Tags should be a comma-separated string
+    const [tags, setTags] = useState("");
     const [price, setPrice] = useState("");
     const [stock, setStock] = useState("");
     const [email, setEmail] = useState("");
@@ -22,55 +22,36 @@ const CreateProduct = () => {
 
     const handleImagesChange = (e) => {
         const files = Array.from(e.target.files);
+
         setImages((prevImages) => prevImages.concat(files));
 
         const imagePreviews = files.map((file) => URL.createObjectURL(file));
         setPreviewImages((prevPreviews) => prevPreviews.concat(imagePreviews));
     };
 
-    useEffect(() => {
-      // Cleanup object URLs to avoid memory leaks
-      return () => {
-          previewImages.forEach((url) => URL.revokeObjectURL(url));
-      };
-  }, [previewImages]);
-  
-  
-    // sending data to the backend
     const handleSubmit = async (e) => {
         e.preventDefault();
+        console.log("Hi")
 
         const formData = new FormData();
         formData.append("name", name);
         formData.append("description", description);
         formData.append("category", category);
-        formData.append("tags", tags.trim());  // Ensure tags are a comma-separated string
+        formData.append("tags", tags);
         formData.append("price", price);
         formData.append("stock", stock);
         formData.append("email", email);
 
-        // Ensure images are appended correctly
-        images.forEach((image, index) => {
-            console.log(`Appending image ${index + 1}:`, image.name);
+        images.forEach((image) => {
             formData.append("images", image);
         });
 
-        // Debugging FormData content
-        console.log("FormData before sending:");
-        formData.forEach((value, key) => {
-            console.log(key, value);
-        });
-
         try {
-            const response = await axios.post(
-                "http://localhost:8000/api/v2/product/create-product",
-                formData,
-                {
-                    headers: {
-                        "Content-Type": "multipart/form-data",
-                    },
-                }
-            );
+            const response = await axios.post("http://localhost:8000/api/v2/product/create-product", formData, {
+                headers: {
+                    "Content-Type": "multipart/form-data",
+                },
+            });
 
             if (response.status === 201) {
                 alert("Product created successfully!");
@@ -85,18 +66,19 @@ const CreateProduct = () => {
                 setEmail("");
             }
         } catch (err) {
-            console.error("Error creating product:", err.response?.data || err.message);
+            console.error("Error creating product:", err);
             alert("Failed to create product. Please check the data and try again.");
         }
     };
 
+
     return (
-      <div className="min-h screen flex items-center justify-center bg-gradient-to-r from-blue-100 via-blue-200 to-blue-300">
+        <div className="min-h screen flex items-center justify-center bg-gradient-to-r from-blue-100 via-blue-200 to-blue-300">
     <div className="max-w-lg  m-5 p-4 text-center bg-white rounded-lg shadow-2xl shadow-black  h-0.5 w-screen">
             <h5 className="text-[24px] font-semibold text-center">Create Product</h5>
             <form onSubmit={handleSubmit}>
                 <div className="mt-4">
-                    <label className="pb-1 block">
+                    <label className="pb-1 block flex">
                         Email <span className="text-red-500">*</span>
                     </label>
                     <input
@@ -109,7 +91,7 @@ const CreateProduct = () => {
                     />
                 </div>
                 <div>
-                    <label className="pb-1 block">
+                    <label className="pb-1 block flex">
                         Name <span className="text-red-500">*</span>
                     </label>
                     <input
@@ -122,7 +104,7 @@ const CreateProduct = () => {
                     />
                 </div>
                 <div className="mt-4">
-                    <label className="pb-1 block">
+                    <label className="pb-1 block flex">
                         Description <span className="text-red-500">*</span>
                     </label>
                     <textarea
@@ -135,7 +117,7 @@ const CreateProduct = () => {
                     ></textarea>
                 </div>
                 <div className="mt-4">
-                    <label className="pb-1 block">
+                    <label className="pb-1 block flex">
                         Category <span className="text-red-500">*</span>
                     </label>
                     <select
@@ -153,7 +135,7 @@ const CreateProduct = () => {
                     </select>
                 </div>
                 <div className="mt-4">
-                    <label className="pb-1 block">Tags</label>
+                    <label className="pb-1 block flex">Tags</label>
                     <input
                         type="text"
                         value={tags}
@@ -163,7 +145,7 @@ const CreateProduct = () => {
                     />
                 </div>
                 <div className="mt-4">
-                    <label className="pb-1 block">
+                    <label className="pb-1 block flex">
                         Price <span className="text-red-500">*</span>
                     </label>
                     <input
@@ -176,7 +158,7 @@ const CreateProduct = () => {
                     />
                 </div>
                 <div className="mt-4">
-                    <label className="pb-1 block">
+                    <label className="pb-1 block flex">
                         Stock <span className="text-red-500">*</span>
                     </label>
                     <input
@@ -189,7 +171,7 @@ const CreateProduct = () => {
                     />
                 </div>
                 <div className="mt-4">
-                    <label className="pb-1 block">
+                    <label className="pb-1 block flex">
                         Upload Images <span className="text-red-500">*</span>
                     </label>
                     <input
