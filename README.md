@@ -134,3 +134,13 @@ In this Milestone,
 3. Change a bit of data in Multer.js
 4. Dynamically add the created products to the home page.
 5. View the data from the main page.
+
+
+### Milestone 12: Dynamic Filtering
+
+In this Milestone,
+1. To write an endpoint that will send data by filtering with my mail and send data from mongodb.
+2. To receive data at frontend -How to display that data dynamically using product card created earlier.
+3. The user can give their email, and the products from that email can be seen.
+4. We create a new page myProducts to show the products of the user.
+5. We update product.js in the backend to create,save and show the product.

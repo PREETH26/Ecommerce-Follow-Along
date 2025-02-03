@@ -5,6 +5,7 @@ import SignupPage from './pages/singUpPage';
 import Home from './pages/Home';
 import CreateProduct from './pages/createProduct';
 import "./App.css";
+import MyProducts from './pages/myProducts';
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
       <Route path='/login' element={<LoginPage/>}/>
       <Route path="/signup" element={<SignupPage />} />
       <Route path="/create-product" element={<CreateProduct />} />
+      <Route path="/my-products" element={<MyProducts/>} />
     </Routes>
     </BrowserRouter>
     
