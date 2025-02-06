@@ -154,3 +154,13 @@ In this Milestone,
 3. We use router and post method.
 4. The entire data and also part of data can be changed.
 5. frontend we will add an edit button to the product card. When click on edit we will send the data to form and make it auto fill and have option to edit those data and save.
+
+
+### Milestone 14:
+
+In this Milestone,
+1. Write an endpoint that delete the product with specific ID from MongoDB.
+2. We use routers to delete the product
+3. In frontend we will add an delete button to the product card.
+4. When click on delete button we will send the product id to server endpoint.
+5. After deleting the product will be removed from user's page.
