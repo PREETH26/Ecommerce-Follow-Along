@@ -144,3 +144,13 @@ In this Milestone,
 3. The user can give their email, and the products from that email can be seen.
 4. We create a new page myProducts to show the products of the user.
 5. We update product.js in the backend to create,save and show the product.
+
+
+### Milestone 13: 
+
+In this Milestone,
+1. Write an endpoint that will update the existing data in MongoDB.
+2. Auto fill the form with previous data and give option to edit.
+3. We use router and post method.
+4. The entire data and also part of data can be changed.
+5. frontend we will add an edit button to the product card. When click on edit we will send the data to form and make it auto fill and have option to edit those data and save.
