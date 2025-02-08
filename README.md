@@ -164,3 +164,17 @@ In this Milestone,
 3. In frontend we will add an delete button to the product card.
 4. When click on delete button we will send the product id to server endpoint.
 5. After deleting the product will be removed from user's page.
+
+
+### Milestone 15: Nav Bar
+
+In this Milestone,
+1. Creating and Nav component.
+2. Reusing the same component in multiple pages.
+3. Create an new Nav component with links to all pages:
+    - Home
+    - My-products
+    - Add product
+    - cart
+4. Adding the nav component to all the pages and make the navigations to all this pages smooth and easy.
+5. Making the Navbar responsive to all screen sizes.
