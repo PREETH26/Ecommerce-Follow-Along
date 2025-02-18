@@ -186,3 +186,17 @@ In this Milestone,
 1. Create an product info page that display all the product data and choose quantity and add to card button.
 2. New page to display each product.
 3. Adding quantity and add to card button.
+
+
+### Milestone 17: Cart
+
+In this Milestone,
+1. Edit the user schema to store cart products .
+2. Write an end point to receive the product details and store in database.
+
+
+### Milestone 17: Cart continuation
+
+In this Milestone,
+1. Create an endpoint to receive request from cart page.
+2. Create an backend endpoint to fetch all the products inside cart with user mail.
