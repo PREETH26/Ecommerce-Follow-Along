@@ -195,7 +195,7 @@ In this Milestone,
 2. Write an end point to receive the product details and store in database.
 
 
-### Milestone 17: Cart continuation
+### Milestone 18: Cart continuation
 
 In this Milestone,
 1. Create an endpoint to receive request from cart page.
