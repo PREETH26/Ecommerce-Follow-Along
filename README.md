@@ -210,3 +210,11 @@ In this Milestone,
 3. Also write an endpoint to increase and decrease the quantity.
 4. Creating cart frontend page and display the products.
 5. Using PUT method to update the data.
+
+
+### Milestone 20: Profile Page 
+
+In this Milestone,
+1. Create and backend endpoint that will send all the user data using mail.
+2. Create an frontend profile page that will display all the user data.
+3. Display profile photo, name, mail and addresses.
