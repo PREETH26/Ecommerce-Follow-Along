@@ -200,3 +200,13 @@ In this Milestone,
 In this Milestone,
 1. Create an endpoint to receive request from cart page.
 2. Create an backend endpoint to fetch all the products inside cart with user mail.
+
+
+### Milestone 19: Cart Page 
+
+In this Milestone,
+1. Create an cart page that display the products inside cart using endpoint that we used in the previous milestone.
+2. Adding + and - buttons to increase or decrease the quantity of the products.
+3. Also write an endpoint to increase and decrease the quantity.
+4. Creating cart frontend page and display the products.
+5. Using PUT method to update the data.
