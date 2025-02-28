@@ -6,7 +6,7 @@ import Nav from "../components/nav";
 
 export default function Profile() {
 	const [personalDetails, setPersonalDetails] = useState({
-		name: "",
+		name: "KL",
 		email: "",
 		phoneNumber: "",
 		avatarUrl: "",
