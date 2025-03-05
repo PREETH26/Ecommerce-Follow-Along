@@ -255,3 +255,13 @@ In this Milestone,
 3. Display the address user selected to deliver.
 4. Display the total value of the cart.
 5. Place order button at the bottom.
+
+
+### Milestone 25: Place Order Backend
+
+In this Milestone,
+1. Create an endpoint that will receive the products, user, address details.
+2. Get the mail of the user using that you need to retrive the _id of the user.
+3. For each product the order will be different with same address.
+4. Using order schema we created earlier we will store order details in mongodb order collection.
+5. The page will finally lead to the success endpoint if Successfull.
