@@ -265,3 +265,13 @@ In this Milestone,
 3. For each product the order will be different with same address.
 4. Using order schema we created earlier we will store order details in mongodb order collection.
 5. The page will finally lead to the success endpoint if Successfull.
+
+
+### Milestone 26: Backend Endpoint
+
+In this Milestone,
+1. Create an endpoint that will receive the user mail.
+2. Get the mail of the user using that you need to retrive the _id of the user.
+3. Use the _id to get all the orders of that user.
+4. Send all the users orders in the response.
+5. Also do Error management.
