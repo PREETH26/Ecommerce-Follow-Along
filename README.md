@@ -275,3 +275,13 @@ In this Milestone,
 3. Use the _id to get all the orders of that user.
 4. Send all the users orders in the response.
 5. Also do Error management.
+
+
+### Milestone 27: My Orders Page
+
+In this Milestone,
+1. Create an my-orders page.
+2. Send a get request to my-orders endpoint that we created in previous milestone.
+3. Send user mail in to endpoint to get all the user orders.
+4. Display all the user orders.
+5. Add my-orders page in navbar for better navigation.

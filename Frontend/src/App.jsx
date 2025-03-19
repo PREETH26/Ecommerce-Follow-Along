@@ -12,6 +12,7 @@ import Profile from "./pages/profile"
 import CreateAddress from './pages/createAddress';
 import SelectAddress from './pages/SelectAddress.jsx';
 import OrderConfirmation from './pages/OrderConfirmation.jsx';
+import MyOrdersPage from './pages/myorders.jsx';
 
 const App = () => {
   return (
@@ -29,6 +30,7 @@ const App = () => {
         <Route path="/create-address" element={<CreateAddress />} />
         <Route path="/select-address" element={<SelectAddress />} />
         <Route path="/order-confirmation" element={<OrderConfirmation />} />
+        <Route path="/myorders" element={<MyOrdersPage/>}/>
     </Routes>
     </BrowserRouter>
     

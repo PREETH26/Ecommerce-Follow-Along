@@ -30,7 +30,6 @@ const userRoutes = require("./controllers/user");
 const productRoutes = require('./controllers/product');
 const orders = require('./controllers/orders');
 
-
 // Route Handling
 app.use("/api/v2/user", userRoutes);
 app.use("/api/v2/product", productRoutes);
