@@ -287,7 +287,7 @@ In this Milestone,
 5. Add my-orders page in navbar for better navigation.
 
 
-### Milestone 28:Cancel the placed orders.
+### Milestone 28: Cancel the placed orders
 
 In this Milestone,
 1. In my-orders page for every order add cancel order button.
@@ -295,3 +295,11 @@ In this Milestone,
 3. Create an endpoint that will receive the order-id.
 4. Get the order using this id and mark the status canceled and save.
 5. We update the order.js controller to update the changes.
+
+
+### Milestone 29: Payment
+
+In this Milestone,
+1. Using PayPal API in our program.
+2. Integrating online payments.
+3. Making sure it works without errors.
