@@ -3,6 +3,8 @@ import '../App.css';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import axios from 'axios';  // Don't forget to import axios
+import { useDispatch } from 'react-redux';
+import { setemail } from "../store/userAction.js";
 
 function Signup() {
   const { register, handleSubmit, formState: { errors }, reset, watch } = useForm();

@@ -3,6 +3,8 @@ import '../App.css'
 import {useForm} from 'react-hook-form'
 import { Link } from 'react-router-dom';
 import axios from 'axios'
+import { useDispatch } from 'react-redux';
+import { setemail } from "../store/userAction.js";
 
 function login() {
   const {register,handleSubmit,formState:{errors},reset} = useForm();
@@ -20,7 +22,9 @@ function login() {
         "http://localhost:8000/api/v2/user/login",
         { email: email.toLowerCase(), password }, // Convert email to lowercase
         { headers: { "Content-Type": "application/json" } }
+        
       );
+      dispatch(setemail(email));
 
       console.log("Login Success:", response.data);
       localStorage.setItem("token", response.data.token); // Save token if needed

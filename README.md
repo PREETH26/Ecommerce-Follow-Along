@@ -311,3 +311,9 @@ In this Milestone,
 2. Implementing online payment using PayPal API using the client key you created earlier.
 3. Downloading NPM package called react-paypal-js that will provide an component called PayPalScriptProvider which will display online payment methods like credit or debit card.
 
+### Milestone 31: Global State Management
+
+In this Milestone,
+1. Using redux for global state management.
+2. Implementing redux store to store all global states.
+3. Installing Redux and using it fro email in Signup and Login.
