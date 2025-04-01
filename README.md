@@ -303,3 +303,11 @@ In this Milestone,
 1. Using PayPal API in our program.
 2. Integrating online payments.
 3. Making sure it works without errors.
+
+### Milestone 30: Pay Pal
+
+In this Milestone,
+1. Creating PayPal account and getting the UserID inside sandbox account.
+2. Implementing online payment using PayPal API using the client key you created earlier.
+3. Downloading NPM package called react-paypal-js that will provide an component called PayPalScriptProvider which will display online payment methods like credit or debit card.
+
