@@ -321,8 +321,15 @@ In this Milestone,
 
 ### Milestone 32: REDUX
 
-
 In this Milestone,
 1. Use redux to store the state and access in all the pages.
 2. Use Dispatch method to store the mail inside global state.
 3. Save the the mail stored in global state using useSelector.
+
+
+### Milestone 33: COOKIE AND JWT
+
+In this Milestone,
+1. Create an JWT token.
+2. Storing the tokens inside the cookie.
+3. Adding the cookie inside the response.

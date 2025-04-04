@@ -1,15 +1,22 @@
 import React,{useState} from 'react'
 import '../App.css'
+import styles from "../styles/styles.js";
+
 import {useForm} from 'react-hook-form'
 import { Link } from 'react-router-dom';
 import axios from 'axios'
 import { useDispatch } from 'react-redux';
 import { setemail } from "../store/userAction.js";
 
+axios.defaults.withCredentials = true;
+
+
 function login() {
   const {register,handleSubmit,formState:{errors},reset} = useForm();
   const [error, setError] = useState(""); 
   const [submit,setSubmit] = useState(false);
+  const dispatch = useDispatch();
+
  
   
   const doneSubmit = async(data)=>{
@@ -60,7 +67,10 @@ function login() {
         <button className='p-2 bg-gradient-to-r from-blue-500 to-indigo-600 h-50 rounded-md hover:bg-blue-600 text-white' type='submit'>LOGIN</button>
 
       <div className='flex items-center justify-center gap-2'>
-        <span className="text-sm text-gray-600">Don't have an account?</span>
+      <div className={`${styles.noramlFlex}`}>
+              <h4>Not have any account?</h4>
+            </div>
+            
       <Link to="/signup" className="text-blue-600 hover:underline text-sm">
         Sign up
       </Link>
