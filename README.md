@@ -317,3 +317,12 @@ In this Milestone,
 1. Using redux for global state management.
 2. Implementing redux store to store all global states.
 3. Installing Redux and using it fro email in Signup and Login.
+
+
+### Milestone 32: REDUX
+
+
+In this Milestone,
+1. Use redux to store the state and access in all the pages.
+2. Use Dispatch method to store the mail inside global state.
+3. Save the the mail stored in global state using useSelector.
